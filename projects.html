@@ -4,6 +4,73 @@
     <title>My Projects</title>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Circles</title>
+  <style>
+    /* Style the main page background */
+    body {
+      background-color: black;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Create a flexbox container for the three circles in a row */
+    .circle-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px; /* Space between circles */
+      width: 80%;
+      max-width: 800px;
+    }
+
+    /* Style the circles */
+    .circle {
+      width: 150px;
+      height: 150px;
+      background-color: white; /* You can change this to any color */
+      border-radius: 50%; /* Creates the circle */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    /* Style the context/text inside the circles */
+    .circle p {
+      color: black;
+      font-size: 16px;
+      text-align: center;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="circle-container">
+    <div class="circle">
+      <p>Circle One Context</p>
+    </div>
+    <div class="circle">
+      <p>Circle Two Context</p>
+    </div>
+    <div class="circle">
+      <p>Circle Three Context</p>
+    </div>
+  </div>
+
+</body>
+</html>
+    
     <h1>Handheld Vein Finder</h1>
     <p>enter description here</p>
     <!-- Inside index.html -->
