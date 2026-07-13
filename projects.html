@@ -1,32 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Background Page</title>
-    <style>
-        body {
-            background-color: black;
-            color: white; /* Makes text readable */
-            font-family: sans-serif;
-            padding: 20px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Welcome to My Dark Mode Page</h1>
-    <p>This page uses simple HTML and CSS to create a black background with white text.</p>
-</body>
-
-<head>
-    <title>My Projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Allie's BME Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <h1>Handheld Vein Finder</h1>
-    <p>enter description here</p>
-    <!-- Inside index.html -->
-<a href="index.html">Home</a>
-<a href="about.html">About Me</a>
+<header class="site-nav">
+  <div class="nav-row">
+    <div class="brand">Allie <small>Biomedical Engineering — Cornell</small></div>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section style="border-bottom:none; padding-top:48px;">
+    <span class="eyebrow">Portfolio · Sheet 02</span>
+    <h1>Projects</h1>
+    <p style="max-width:65ch;color:var(--ink-soft);">
+      Two devices, two very different problems: a low-cost vein finder built end-to-end in
+      Fusion 360, and a magnetic energy-harvesting circuit for a hearing aid built with
+      Engineering World Health and Solar Ear.
+    </p>
+
+    <div class="project-grid">
+
+      <!-- ============ VEIN FINDER CARD ============ -->
+      <div class="project-card">
+        <div class="thumb">
+          <!-- REPLACE IMAGE: assets/img/thumbnails/vein-finder-thumb.jpg -->
+          <img src="assets/img/thumbnails/vein-finder-thumb.jpg"
+               alt="Vein finder thumbnail"
+               data-fallback-label="THUMBNAIL<br>assets/img/thumbnails/vein-finder-thumb.jpg<br><br>a clean CAD render or hero photo works well here"
+               data-shape="landscape"
+               style="width:100%;display:block;object-fit:cover;aspect-ratio:16/10;">
+        </div>
+        <div class="card-body">
+          <h3>Vein Finder</h3>
+          <div class="tag-row">
+            <span class="tag">Fusion 360</span>
+            <span class="tag">CAD assembly</span>
+            <span class="tag">Independent project</span>
+          </div>
+          <p>A vein-finding device designed and modeled as a full linked assembly, from early
+            reasoning and background research through CAD, construction, and final build.</p>
+          <a class="btn primary" href="vein-finder.html">View Project →</a>
+        </div>
+      </div>
+
+      <!-- ============ HEARING AID CARD ============ -->
+      <div class="project-card">
+        <div class="thumb">
+          <!-- REPLACE IMAGE: assets/img/thumbnails/hearing-aid-thumb.jpg -->
+          <img src="assets/img/thumbnails/hearing-aid-thumb.jpg"
+               alt="Hearing aid project thumbnail"
+               data-fallback-label="THUMBNAIL<br>assets/img/thumbnails/hearing-aid-thumb.jpg<br><br>your poster or a circuit photo works well here"
+               data-shape="landscape"
+               style="width:100%;display:block;object-fit:cover;aspect-ratio:16/10;">
+        </div>
+        <div class="card-body">
+          <h3>Hearing Aid — Solar Ear Collaboration</h3>
+          <div class="tag-row">
+            <span class="tag">Engineering World Health</span>
+            <span class="tag">Team project</span>
+            <span class="tag">Circuit design</span>
+          </div>
+          <p>A magnetic energy-harvesting circuit and solenoid-based voltage generation system for
+            a low-cost hearing aid, developed as project team lead with EWH at Cornell.</p>
+          <a class="btn primary" href="hearing-aid.html">View Project →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="title-block">
+    <div class="cell"><span class="label">Sheet</span><span class="value">02 / Projects</span></div>
+    <div class="cell"><span class="label">Count</span><span class="value">2 devices</span></div>
+    <div class="cell"><span class="label">Tools</span><span class="value">Fusion 360, circuits</span></div>
+    <div class="cell"><span class="label">Status</span><span class="value">In progress</span></div>
+  </div>
+
+  <footer>
+    <p class="fine">← <a href="index.html">Back to Home</a></p>
+  </footer>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>

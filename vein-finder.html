@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vein Finder — Allie's BME Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-row">
+    <div class="brand">Allie <small>Biomedical Engineering — Cornell</small></div>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="project-header">
+    <span class="eyebrow">Project 01 · Independent</span>
+    <h1>Vein Finder</h1>
+    <div class="meta-row">
+      <span>Tool: Fusion 360</span>
+      <span>Type: Linked assembly, external components</span>
+      <span>Status: [in progress / complete]</span>
+    </div>
+  </div>
+
+  <!-- ============ 1. REASONING / BACKGROUND ESSAY ============ -->
+  <section>
+    <span class="section-num">01</span><strong>Reasoning &amp; Background</strong>
+    <div class="essay" style="margin-top:16px;">
+      <!--
+        PASTE YOUR MINI ESSAY HERE.
+        Delete the placeholder box below and replace it with plain
+        <p>...</p> paragraphs. Suggested flow: motivation → the
+        clinical/background problem → your design approach.
+      -->
+      <div class="essay-placeholder">PASTE YOUR MINI ESSAY / REASONING + BACKGROUND WRITE-UP HERE.
+
+Replace this box with normal paragraphs, e.g.:
+
+&lt;p&gt;Your first paragraph...&lt;/p&gt;
+&lt;p&gt;Your second paragraph...&lt;/p&gt;
+
+Suggested structure (optional, delete if your essay already
+has its own flow):
+— Motivation: why this problem, why it matters
+— Background: the clinical/technical context
+— Design approach: how the assembly addresses it</div>
+    </div>
+  </section>
+
+  <!-- ============ 2. CAD GALLERY ============ -->
+  <section>
+    <span class="section-num">02</span><strong>CAD — Fusion 360 Assembly</strong>
+    <p style="color:var(--ink-soft);max-width:65ch;">
+      Multiple angles of the linked assembly. To add or remove an angle, edit the
+      <code>caseAngles</code> list in the &lt;script&gt; at the bottom of this page —
+      the grid above updates automatically.
+    </p>
+    <div class="gallery" id="cad-gallery"></div>
+  </section>
+
+  <!-- ============ 3. VIDEO ESSAY ============ -->
+  <section>
+    <span class="section-num">03</span><strong>Video Essay</strong>
+    <p style="color:var(--ink-soft);max-width:65ch;">
+      REPLACE FILE: <code>assets/video/vein-finder-video-essay.mp4</code>. Keep the filename
+      the same and the player below will pick it up automatically. If your video is large,
+      compress it first (see the README) so the page stays fast to load.
+    </p>
+    <div class="video-frame">
+      <video controls preload="metadata" poster="assets/img/vein-finder/construction/video-poster.jpg">
+        <source src="assets/video/vein-finder-video-essay.mp4" type="video/mp4">
+        Your browser doesn't support embedded video —
+        <a href="assets/video/vein-finder-video-essay.mp4">download the video essay</a> instead.
+      </video>
+    </div>
+  </section>
+
+  <!-- ============ 4. CONSTRUCTION / FINAL PHOTOS ============ -->
+  <section>
+    <span class="section-num">04</span><strong>Construction &amp; Final Photos</strong>
+    <p style="color:var(--ink-soft);max-width:65ch;">
+      Build progress and the finished device. Same idea as the CAD gallery — edit the
+      <code>constructionPhotos</code> list below to add more.
+    </p>
+    <div class="gallery" id="construction-gallery"></div>
+  </section>
+
+  <div class="title-block">
+    <div class="cell"><span class="label">Sheet</span><span class="value">03 / Vein Finder</span></div>
+    <div class="cell"><span class="label">Software</span><span class="value">Fusion 360</span></div>
+    <div class="cell"><span class="label">Assembly</span><span class="value">Linked, external refs</span></div>
+    <div class="cell"><span class="label">Deliverables</span><span class="value">Essay, CAD, video, build</span></div>
+  </div>
+
+  <footer>
+    <p class="fine">← <a href="projects.html">Back to Projects</a></p>
+  </footer>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  // ---- EDIT THESE TWO LISTS to add/remove/reorder images. ----
+  // Files go in the matching folder; filenames here must match exactly.
+  const caseAngles = [
+    'cad-1.jpg',   // e.g. isometric / hero angle
+    'cad-2.jpg',   // e.g. front view
+    'cad-3.jpg',   // e.g. exploded view
+    'cad-4.jpg'    // e.g. section / internal view
+  ];
+  const constructionPhotos = [
+    'build-1.jpg',
+    'build-2.jpg',
+    'final-1.jpg',
+    'final-2.jpg'
+  ];
+
+  buildGallery('cad-gallery', 'assets/img/vein-finder/cad/', caseAngles);
+  buildGallery('construction-gallery', 'assets/img/vein-finder/construction/', constructionPhotos);
+</script>
+</body>
+</html>

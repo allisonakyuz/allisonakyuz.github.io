@@ -1,13 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First GitHub Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Allie — Biomedical Engineering Portfolio</title>
+<meta name="description" content="Biomedical engineering portfolio — Cornell Meinig School of Biomedical Engineering.">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Allison Akyuz</h1>
-    <nav>
-  <a href="about.html">About Me</a>
-  <a href="projects.html">My Projects</a>
-</nav>
+
+<header class="site-nav">
+  <div class="nav-row">
+    <div class="brand">Allie <small>Biomedical Engineering — Cornell</small></div>
+    <nav class="links">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" style="border-bottom:none;">
+    <div>
+      <div class="portrait-frame">
+        <!--
+          REPLACE IMAGE: assets/img/profile/profile.jpg
+          Suggested size: portrait orientation, at least 800x1000px, JPG or PNG.
+          Until that file exists, the frame below shows a placeholder automatically.
+        -->
+        <img src="assets/img/profile/profile.jpg"
+             alt="Portrait photo"
+             data-fallback-label="PORTRAIT PHOTO<br>assets/img/profile/profile.jpg<br><br>800×1000px+, JPG/PNG"
+             style="width:100%;display:block;object-fit:cover;aspect-ratio:4/5;">
+        <div class="frame-label">FIG. 0 — PORTRAIT</div>
+      </div>
+    </div>
+
+    <div>
+      <span class="eyebrow">Portfolio · Sheet 01</span>
+      <h1>Hi, I'm Allie.</h1>
+      <div class="role">B.S. Biomedical Engineering · Cornell University, Meinig School</div>
+
+      <p>
+        I'm a rising sophomore studying Biomedical Engineering at Cornell, working at the
+        intersection of instrumentation, imaging, and global health. I lead a project team with
+        Engineering World Health, building a magnetic energy-harvesting circuit for a low-cost
+        hearing aid in collaboration with Solar Ear. My internship work has spanned MRI and
+        breast-cancer imaging systems and handheld ultrasound technology, and I move comfortably
+        between the electrical and mechanical sides of medical device design.
+      </p>
+      <p>
+        <!-- EDIT: add a second paragraph here — what drew you to BME, what you're
+             looking for next (research, internships), or a line about your interests
+             outside the lab if you want the page to feel more personal. -->
+        [Add a second paragraph here if you'd like — e.g. what you're looking for next,
+        or a personal line about your interests outside the lab.]
+      </p>
+
+      <div class="btn-row">
+        <!-- EDIT: replace # with your real LinkedIn URL -->
+        <a class="btn" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <!-- REPLACE FILE: assets/resume/resume.pdf -->
+        <a class="btn primary" href="assets/resume/resume.pdf" target="_blank" rel="noopener">Download Résumé</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="title-block">
+    <div class="cell"><span class="label">Name</span><span class="value">Allie [Last Name]</span></div>
+    <div class="cell"><span class="label">Program</span><span class="value">B.S. Biomedical Eng.</span></div>
+    <div class="cell"><span class="label">Institution</span><span class="value">Cornell University</span></div>
+    <div class="cell"><span class="label">Sheet</span><span class="value">01 / Home</span></div>
+  </div>
+
+  <footer>
+    <p class="fine">Site last revised — [update date]. Built as a two-page portfolio: Home + Projects.</p>
+  </footer>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
