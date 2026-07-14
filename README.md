@@ -1,8 +1,9 @@
 # Allie's BME Portfolio, Setup & Content Guide
 
-A 2-page portfolio site (Home + Projects) styled like an engineering spec sheet, in cool-toned
-shades of brown with a Times New Roman type stack. This file tells you exactly what to do to get
-it live on GitHub Pages, what's already filled in, and what's still missing.
+A 2-page portfolio site (Home + Projects) styled like an engineering spec sheet, in a grey, white,
+and deep navy palette with a single Times New Roman type stack throughout. This file tells you
+exactly what to do to get it live on GitHub Pages, what's already filled in, and what's still
+missing.
 
 ---
 
@@ -104,10 +105,10 @@ The gallery grid resizes itself automatically, no need to touch the CSS. Recomme
 ## 7. Retinting or restyling
 
 All colors live as CSS variables at the top of `css/style.css` under `:root`. Change a hex value
-there and it updates everywhere (`--copper` is the accent used for links and highlights, `--paper`
-is the background). The main font is a Times New Roman stack; the small monospace labels (nav,
-tags, captions) use IBM Plex Mono for the technical/drafting feel, both are also set at the top of
-that file if you want to change them.
+there and it updates everywhere (`--copper` is the navy accent used for links and highlights,
+despite the name, it's set to a deep blue now, `--paper` is the background). The whole site uses
+one Times New Roman stack for everything, headings, nav, labels, captions, no separate monospace
+font anymore.
 
 ---
 

@@ -37,6 +37,29 @@ function buildGallery(containerId, folder, filenames){
   });
 }
 
+// Variant for transparent-background renders (CAD drawings): no crop,
+// no card border, just the drawing and a caption underneath.
+function buildCadGallery(containerId, folder, filenames){
+  const container = document.getElementById(containerId);
+  if(!container) return;
+  filenames.forEach(name => {
+    const fig = document.createElement('figure');
+    const img = document.createElement('img');
+    img.src = folder + name;
+    img.alt = name.replace(/\.[a-z]+$/i,'').replace(/[-_]/g,' ');
+    img.loading = 'lazy';
+    img.addEventListener('click', () => openLightbox(img.src));
+    img.addEventListener('error', () => {
+      fig.innerHTML = `<span class="placeholder-img" style="aspect-ratio:4/3;display:flex;">MISSING FILE<br>${folder}${name}</span>`;
+    });
+    const cap = document.createElement('figcaption');
+    cap.textContent = name.replace(/\.[a-z]+$/i,'').replace(/[-_]/g,' ');
+    fig.appendChild(img);
+    fig.appendChild(cap);
+    container.appendChild(fig);
+  });
+}
+
 function openLightbox(src){
   let lb = document.querySelector('.lightbox');
   if(!lb){

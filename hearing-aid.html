@@ -30,56 +30,71 @@
     </div>
   </div>
 
-  <!-- ============ 1. PROJECT CONTEXT ============ -->
+  <!-- ============ 1. ABOUT + POSTER, SIDE BY SIDE ============ -->
   <section>
     <span class="section-num">01</span><strong>About the Project</strong>
-    <div class="essay" style="margin-top:16px;">
-      <p>
-        This project is a collaboration between Engineering World Health at Cornell and Solar Ear,
-        focused on a magnetic energy harvesting pendulum for a low-cost, sustainable hearing aid
-        intended for underserved communities. As a member of the Integrative Design subteam, my
-        primary contribution has been circuit design and testing for the energy harvesting system.
-        The team presented these findings at the ASEE St. Lawrence Research Poster Conference, and
-        the collaboration with Solar Ear is continuing into Fall 2026 to refine the prototype.
-      </p>
+    <div class="poster-split" style="margin-top:16px;">
+      <div class="essay" style="column-count:1;">
+        <p>
+          This project is a collaboration between Engineering World Health at Cornell and Solar
+          Ear, focused on a magnetic energy harvesting pendulum for a low-cost, sustainable
+          hearing aid intended for underserved communities. As a member of the Integrative Design
+          subteam, my primary contribution has been circuit design and testing for the energy
+          harvesting system. The team presented these findings at the ASEE St. Lawrence Research
+          Poster Conference, and the collaboration with Solar Ear is continuing into Fall 2026 to
+          refine the prototype.
+        </p>
+      </div>
+      <div class="poster-frame">
+        <img src="assets/img/hearing-aid/poster/poster.jpg"
+             alt="Kinetic Energy-Powered Hearing Aids conference poster"
+             data-fallback-label="POSTER IMAGE<br>assets/img/hearing-aid/poster/poster.jpg"
+             onclick="openLightbox(this.src)">
+      </div>
     </div>
   </section>
 
-  <!-- ============ 2. POSTER ============ -->
+  <!-- ============ 2. CIRCUIT-TO-CONFERENCE STORY ============ -->
   <section>
-    <span class="section-num">02</span><strong>Conference Poster</strong>
-    <div class="gallery" id="poster-gallery"></div>
-  </section>
-
-  <!-- ============ 3. CIRCUITS (individual contribution) ============ -->
-  <section>
-    <span class="section-num">03</span><strong>Circuit Work</strong>
-    <p style="color:var(--ink-soft);max-width:65ch;">
-      Your individual contribution to the collaboration: the energy harvesting circuit schematic,
-      a breadboard prototype under multimeter testing, and the electrical specifications section
-      from the poster.
+    <span class="section-num">02</span><strong>From Circuit to Conference</strong>
+    <p style="color:var(--ink-soft);max-width:70ch;">
+      My individual contribution to the collaboration, from schematic to a tested prototype to
+      presenting the results.
     </p>
-    <div class="gallery" id="circuit-gallery"></div>
-  </section>
-
-  <!-- ============ 4. PRESENTING PHOTO ============ -->
-  <section>
-    <span class="section-num">04</span><strong>Presenting</strong>
-    <div class="portrait-frame" style="max-width:560px;">
-      <img src="assets/img/hearing-aid/presenting/presenting.jpg"
-           alt="Presenting the hearing aid poster at the ASEE St. Lawrence Research Poster Conference"
-           data-fallback-label="PHOTO OF YOU PRESENTING<br>assets/img/hearing-aid/presenting/presenting.jpg"
-           style="width:100%;display:block;object-fit:cover;aspect-ratio:16/11;">
-      <div class="frame-label">FIG, PRESENTING AT ASEE ST. LAWRENCE</div>
+    <div class="story-row">
+      <div class="story-step">
+        <span class="step-num">01</span>
+        <figure>
+          <img src="assets/img/hearing-aid/circuits/circuit-1-schematic.jpg"
+               alt="Energy harvesting circuit schematic"
+               onclick="openLightbox(this.src)">
+        </figure>
+        <p>The energy harvesting circuit: a full-bridge rectifier and filtering stage feeding a
+          regulated DC output, tested against a voltmeter.</p>
+      </div>
+      <div class="story-arrow">&rarr;</div>
+      <div class="story-step">
+        <span class="step-num">02</span>
+        <figure>
+          <img src="assets/img/hearing-aid/circuits/circuit-2-breadboard-testing.jpg"
+               alt="Breadboard prototype under multimeter testing"
+               onclick="openLightbox(this.src)">
+        </figure>
+        <p>Built out on a breadboard and tested with a multimeter to validate the circuit before
+          committing to a final layout.</p>
+      </div>
+      <div class="story-arrow">&rarr;</div>
+      <div class="story-step">
+        <span class="step-num">03</span>
+        <figure>
+          <img src="assets/img/hearing-aid/presenting/presenting.jpg"
+               alt="Presenting the hearing aid poster at the ASEE St. Lawrence Research Poster Conference"
+               onclick="openLightbox(this.src)">
+        </figure>
+        <p>Presenting the results at the ASEE St. Lawrence Research Poster Conference.</p>
+      </div>
     </div>
   </section>
-
-  <div class="title-block">
-    <div class="cell"><span class="label">Sheet</span><span class="value">04 / Hearing Aid</span></div>
-    <div class="cell"><span class="label">Mechanism</span><span class="value">Magnetic pendulum harvester</span></div>
-    <div class="cell"><span class="label">Collaborator</span><span class="value">Solar Ear</span></div>
-    <div class="cell"><span class="label">Deliverables</span><span class="value">Poster, circuits, photo</span></div>
-  </div>
 
   <footer>
     <p class="fine">&larr; <a href="projects.html">Back to Projects</a></p>
@@ -87,19 +102,5 @@
 </div>
 
 <script src="js/main.js"></script>
-<script>
-  // ---- EDIT THESE LISTS to add/remove/reorder images. ----
-  const posterImages = [
-    'poster.jpg'
-  ];
-  const circuitImages = [
-    'circuit-1-schematic.jpg',
-    'circuit-2-breadboard-testing.jpg',
-    'circuit-3-poster-electrical-specs.jpg'
-  ];
-
-  buildGallery('poster-gallery', 'assets/img/hearing-aid/poster/', posterImages);
-  buildGallery('circuit-gallery', 'assets/img/hearing-aid/circuits/', circuitImages);
-</script>
 </body>
 </html>

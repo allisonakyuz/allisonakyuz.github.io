@@ -91,7 +91,7 @@
         this field, this capstone serves as a meaningful step toward the kind of real-world medical
         innovation I hope to contribute to in the future.
       </p>
-      <p style="font-family:'IBM Plex Mono', monospace; font-size:.72rem; color:var(--ink-soft); margin-top:1.5em;">
+      <p style="font-size:.85rem; font-style:italic; color:var(--ink-soft); margin-top:1.5em;">
         Armenteros-Yeguas, V., Gárate-Echenique, L., Tomás-López, M. A., Cristóbal-Domínguez, E.,
         Moreno-de Gusmão, B., Miranda-Serrano, E., &amp; Moraza-Dulanto, M. I. (2017). Prevalence of
         difficult venous access and associated risk factors in highly complex hospitalised
@@ -107,11 +107,11 @@
   <section>
     <span class="section-num">02</span><strong>CAD, Fusion 360 Assembly</strong>
     <p style="color:var(--ink-soft);max-width:65ch;">
-      Multiple angles of the assembly. To add or remove an angle, edit the
-      <code>caseAngles</code> list in the &lt;script&gt; at the bottom of this page, and the
-      grid above updates automatically.
+      Three angles of the assembly, leveled to sit parallel to each other. To add or remove an
+      angle, edit the <code>caseAngles</code> list in the &lt;script&gt; at the bottom of this
+      page, and the row above updates automatically.
     </p>
-    <div class="gallery" id="cad-gallery"></div>
+    <div class="cad-gallery" id="cad-gallery"></div>
   </section>
 
   <!-- ============ 3. VIDEO ESSAY ============ -->
@@ -140,13 +140,6 @@
     <div class="gallery" id="construction-gallery"></div>
   </section>
 
-  <div class="title-block">
-    <div class="cell"><span class="label">Sheet</span><span class="value">03 / Vein Finder</span></div>
-    <div class="cell"><span class="label">Software</span><span class="value">Fusion 360</span></div>
-    <div class="cell"><span class="label">Project</span><span class="value">Senior capstone, Southridge</span></div>
-    <div class="cell"><span class="label">Deliverables</span><span class="value">Essay, CAD, video, build</span></div>
-  </div>
-
   <footer>
     <p class="fine">&larr; <a href="projects.html">Back to Projects</a></p>
   </footer>
@@ -157,11 +150,9 @@
   // ---- EDIT THESE TWO LISTS to add/remove/reorder images. ----
   // Files go in the matching folder; filenames here must match exactly.
   const caseAngles = [
-    'vein-finder-isometric.jpg',
-    'vein-finder-front-angle.jpg',
-    'vein-finder-front-flat.jpg',
-    'vein-finder-open-latch.jpg',
-    'vein-finder-side-profile.jpg'
+    'vein-finder-front-angle.png',
+    'vein-finder-front-flat.png',
+    'vein-finder-open-latch.png'
   ];
   const constructionPhotos = [
     // no photos yet, add filenames here once you take some, e.g.:
@@ -169,7 +160,7 @@
     // 'final-2.jpg'
   ];
 
-  buildGallery('cad-gallery', 'assets/img/vein-finder/cad/', caseAngles);
+  buildCadGallery('cad-gallery', 'assets/img/vein-finder/cad/', caseAngles);
   buildGallery('construction-gallery', 'assets/img/vein-finder/construction/', constructionPhotos);
 </script>
 </body>
