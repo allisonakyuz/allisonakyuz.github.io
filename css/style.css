@@ -352,7 +352,7 @@ section:last-of-type{ border-bottom:none; }
 
 .video-frame{
   border: 2px solid var(--ink);
-  background:#000;
+  background:#0B121C;
   margin-top: 22px;
 }
 .video-frame video{ display:block; width:100%; }

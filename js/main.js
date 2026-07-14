@@ -53,7 +53,8 @@ function buildCadGallery(containerId, folder, filenames){
       fig.innerHTML = `<span class="placeholder-img" style="aspect-ratio:4/3;display:flex;">MISSING FILE<br>${folder}${name}</span>`;
     });
     const cap = document.createElement('figcaption');
-    cap.textContent = name.replace(/\.[a-z]+$/i,'').replace(/[-_]/g,' ');
+    cap.textContent = name.replace(/\.[a-z]+$/i,'').replace(/[-_]/g,' ')
+      .replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1));
     fig.appendChild(img);
     fig.appendChild(cap);
     container.appendChild(fig);

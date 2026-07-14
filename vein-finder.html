@@ -107,9 +107,9 @@
   <section>
     <span class="section-num">02</span><strong>CAD, Fusion 360 Assembly</strong>
     <p style="color:var(--ink-soft);max-width:65ch;">
-      Three angles of the assembly, leveled to sit parallel to each other. To add or remove an
-      angle, edit the <code>caseAngles</code> list in the &lt;script&gt; at the bottom of this
-      page, and the row above updates automatically.
+      Three angles of the assembly. To add or remove an angle, edit the
+      <code>caseAngles</code> list in the &lt;script&gt; at the bottom of this page, and the row
+      above updates automatically.
     </p>
     <div class="cad-gallery" id="cad-gallery"></div>
   </section>
@@ -118,14 +118,15 @@
   <section>
     <span class="section-num">03</span><strong>Video Essay</strong>
     <p style="color:var(--ink-soft);max-width:65ch;">
-      The full build journal, from early prototyping through final testing.
+      The full build journal, from early prototyping through final testing. Hosted as an unlisted
+      YouTube video, not searchable or listed on the channel, but playable right here.
     </p>
     <div class="video-frame">
-      <video controls preload="metadata" poster="assets/img/vein-finder/construction/video-cover.jpg">
-        <source src="assets/video/vein-finder-video-essay.mp4" type="video/mp4">
-        Your browser doesn't support embedded video.
-        <a href="assets/video/vein-finder-video-essay.mp4">Download the video essay</a> instead.
-      </video>
+      <div id="video-facade" style="position:relative;cursor:pointer;" onclick="loadYouTubeVideo()">
+        <img src="assets/img/vein-finder/construction/video-cover.jpg"
+             alt="Video cover, click to play"
+             style="width:100%;display:block;">
+      </div>
     </div>
   </section>
 
@@ -147,12 +148,23 @@
 
 <script src="js/main.js"></script>
 <script>
+  const YOUTUBE_VIDEO_ID = 'tx3O-ITIxTI';
+  function loadYouTubeVideo(){
+    const facade = document.getElementById('video-facade');
+    facade.outerHTML = `<iframe width="100%" height="100%" style="aspect-ratio:16/9;display:block;"
+      src="https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0"
+      title="Vein Finder Full Build Journal" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>`;
+  }
+</script>
+<script>
   // ---- EDIT THESE TWO LISTS to add/remove/reorder images. ----
   // Files go in the matching folder; filenames here must match exactly.
   const caseAngles = [
-    'vein-finder-front-angle.png',
-    'vein-finder-front-flat.png',
-    'vein-finder-open-latch.png'
+    'vein-finder-top-angle.png',
+    'vein-finder-bottom-angle.png',
+    'vein-finder-open-battery-latch.png'
   ];
   const constructionPhotos = [
     // no photos yet, add filenames here once you take some, e.g.:

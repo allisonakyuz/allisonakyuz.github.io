@@ -30,8 +30,10 @@ Every time you push a change, the live site updates automatically within a minut
 - **Home:** your headshot, About Me text (Duffield College of Engineering, Integrative Design
   subteam, Clarius + Olea internships), résumé and LinkedIn buttons, both fully wired up.
 - **Projects:** both cards, with real thumbnails and corrected descriptions.
-- **Vein Finder:** your full capstone essay (with citations), a 5-image CAD gallery, and the full
-  build journal video (19MB, a custom cover card instead of a random video frame).
+- **Vein Finder:** your full capstone essay (with citations), a 3-image CAD gallery, and the full
+  build journal video, hosted as an unlisted YouTube video with a custom cover card that matches
+  the site's theme. Visitors click the cover to load and play it, nothing loads from YouTube until
+  they do.
 - **Hearing Aid:** the About section, a clean high-resolution export of your actual poster file,
   3 circuit images (your schematic, the breadboard/multimeter testing photo, and a crop of the
   poster's electrical specifications section), and your presenting photo.
@@ -67,7 +69,7 @@ assets/
       presenting/
         presenting.jpg            Your presenting photo (filled in)
   video/
-    vein-finder-video-essay.mp4  Full build journal video (filled in, 19MB)
+    (no longer used, video is hosted on YouTube, see vein-finder.html)
   resume/
     resume.pdf                  Your résumé (filled in)
 ```
