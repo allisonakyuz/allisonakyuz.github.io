@@ -1,157 +1,120 @@
-# Allie's BME Portfolio — Setup & Content Guide
+# Allie's BME Portfolio, Setup & Content Guide
 
-A 2-page portfolio site (Home + Projects) styled like an engineering spec sheet, in
-shades of brown. This file tells you exactly what to do to get it live on GitHub Pages
-and where every photo/video/file goes.
+A 2-page portfolio site (Home + Projects) styled like an engineering spec sheet, in cool-toned
+shades of brown with a Times New Roman type stack. This file tells you exactly what to do to get
+it live on GitHub Pages, what's already filled in, and what's still missing.
 
 ---
 
 ## 1. Put it on GitHub Pages
 
 1. Create a new repository on GitHub. Two naming options:
-   - `yourusername.github.io` → site becomes live at `https://yourusername.github.io/`
-   - any other name, e.g. `bme-portfolio` → site becomes live at
+   - `yourusername.github.io`, your site becomes live at `https://yourusername.github.io/`
+   - any other name, e.g. `bme-portfolio`, your site becomes live at
      `https://yourusername.github.io/bme-portfolio/`
-2. Upload **all files in this folder** (keeping the folder structure intact) to that repo.
-   Easiest way: on the repo page, click **Add file → Upload files**, drag the whole
-   contents of this folder in, and commit.
-   (If you're comfortable with git: `git init`, `git add .`, `git commit -m "portfolio"`,
-   `git remote add origin <your repo url>`, `git push -u origin main`.)
-3. In the repo, go to **Settings → Pages**.
-4. Under "Build and deployment", set **Source: Deploy from a branch**, branch **main**,
-   folder **/(root)**. Save.
-5. Wait 1–2 minutes, then visit the URL from step 1. Refresh a couple times if it's not
-   there yet — first deploys can take a few minutes.
+2. Upload **all files in this folder** (keeping the folder structure intact) to that repo, either
+   by dragging them into "Add file > Upload files" on the repo page, or with git if you're
+   comfortable with the command line.
+3. Commit straight to the **main** branch (no need for a separate branch for a solo portfolio).
+4. In the repo, go to **Settings > Pages**. Under "Build and deployment," set **Source: Deploy
+   from a branch**, branch **main**, folder **/(root)**. Save.
+5. Wait 1 to 2 minutes, then visit the URL from step 1.
 
-Every time you push a change (new photo, edited text), the live site updates
-automatically within a minute or two.
+Every time you push a change, the live site updates automatically within a minute or two.
 
 ---
 
-## 2. Folder structure — where everything goes
+## 2. What's already filled in
+
+- **Home:** your headshot, About Me text (Duffield College of Engineering, Integrative Design
+  subteam, Clarius + Olea internships), résumé and LinkedIn buttons (LinkedIn still needs your
+  real URL, see section 3).
+- **Projects:** both cards, with real thumbnails and corrected descriptions.
+- **Vein Finder:** your full capstone essay (with citations), a 5-image CAD gallery, and the full
+  build journal video (96MB, a custom cover card instead of a random video frame). Note: GitHub's
+  hard limit is 100MB per file, so this fits, but it's close to the edge. If you ever re-export a
+  larger version, keep it under 100MB or GitHub will reject the upload.
+- **Hearing Aid:** the About section, a clean high-resolution export of your actual poster file,
+  3 circuit images (your schematic, the breadboard/multimeter testing photo, and a crop of the
+  poster's electrical specifications section), and your presenting photo.
+
+## 3. Still needed from you
+
+1. **Construction and final build photos of the vein finder.** You mentioned you'll take these
+   later. See section 5 below for exactly how to add them once you have them.
+2. **Your real LinkedIn URL** on the home page (currently a placeholder).
+
+---
+
+## 4. Folder structure, where everything goes
 
 ```
-index.html                     ← Home page
-projects.html                  ← Projects landing page (2 cards)
-vein-finder.html               ← Vein finder project detail page
-hearing-aid.html                ← Hearing aid project detail page
-css/style.css                  ← All styling / the brown theme (colors are defined
-                                  as variables at the very top if you want to retint)
-js/main.js                     ← Gallery + lightbox + placeholder behavior (you
-                                  shouldn't need to touch this)
+index.html                     Home page
+projects.html                  Projects landing page (2 cards)
+vein-finder.html               Vein finder project detail page
+hearing-aid.html               Hearing aid project detail page
+css/style.css                  All styling, the cool-brown theme (colors are variables
+                                at the very top if you want to retint further)
+js/main.js                     Gallery + lightbox + placeholder behavior
 assets/
   img/
     profile/
-      profile.jpg              ← YOUR PORTRAIT — home page
-    thumbnails/
-      vein-finder-thumb.jpg    ← small preview image, Projects page card
-      hearing-aid-thumb.jpg    ← small preview image, Projects page card
+      profile.jpg               Your headshot (filled in)
     vein-finder/
-      cad/                     ← all CAD angle screenshots go here
-        cad-1.jpg, cad-2.jpg, cad-3.jpg, cad-4.jpg, ...
-      construction/            ← build progress + final device photos
-        build-1.jpg, build-2.jpg, final-1.jpg, final-2.jpg, ...
+      cad/                      5 CAD renders (filled in), add more here anytime
+      construction/             empty, add build/final photos here later
     hearing-aid/
       poster/
-        poster.jpg             ← your conference poster, high-res
-      circuits/
-        circuit-1.jpg, circuit-2.jpg, circuit-3.jpg, ...
+        poster.jpg               Clean export from your poster file (filled in)
+      circuits/                  3 circuit images (filled in)
       presenting/
-        presenting.jpg         ← photo of you presenting the poster
+        presenting.jpg            Your presenting photo (filled in)
   video/
-    vein-finder-video-essay.mp4  ← your video essay
+    vein-finder-video-essay.mp4  Full build journal video (filled in, 96MB)
   resume/
-    resume.pdf                 ← your résumé
+    resume.pdf                  NOT YET ADDED, drop your résumé PDF in with this exact name
 ```
-
-**Every image and video path above is already wired up in the HTML.** You don't need to
-edit any code to add the *first* copy of each file — just drop the file in with the
-exact name shown, and it appears. Until you do, every spot shows a labeled placeholder
-box telling you the exact path it's waiting on, so you'll always know what's missing
-just by looking at the live site.
 
 ---
 
-## 3. Adding MULTIPLE CAD angles (or extra construction/circuit photos)
+## 5. Adding more images later (CAD angles, construction photos, circuit shots)
 
-The CAD gallery, construction gallery, poster gallery, and circuit gallery are all built
-from a short list of filenames at the bottom of each page, instead of repeated HTML. This
-means adding a 5th, 6th, 10th CAD angle is a two-step process and nothing else:
+Each gallery (CAD, construction, poster, circuits) is built from a short list of filenames at the
+bottom of its page, instead of repeated HTML. To add a new photo:
 
-1. Drop the new image file into the matching folder (e.g.
-   `assets/img/vein-finder/cad/cad-5.jpg`).
-2. Open `vein-finder.html` in a text editor, scroll to the bottom `<script>` block, and
-   add the filename to the list:
+1. Drop the file into the matching folder, e.g. `assets/img/vein-finder/construction/final-1.jpg`.
+2. Open the page in a text editor, scroll to the bottom `<script>` block, and add the filename to
+   the list, for example in `vein-finder.html`:
 
    ```js
-   const caseAngles = [
-     'cad-1.jpg',
-     'cad-2.jpg',
-     'cad-3.jpg',
-     'cad-4.jpg',
-     'cad-5.jpg'   // ← just add a line like this
+   const constructionPhotos = [
+     'final-1.jpg',
+     'final-2.jpg'   // just add a line like this
    ];
    ```
 
-The gallery grid resizes itself automatically — no need to touch the CSS. The same
-pattern applies to `constructionPhotos` (vein-finder.html) and `posterImages` /
-`circuitImages` (hearing-aid.html).
-
-Recommended image sizes: 1200–1800px on the long edge is plenty for web — no need to
-upload full-resolution camera/render exports, since that just slows the site down.
+The gallery grid resizes itself automatically, no need to touch the CSS. Recommended image size:
+1200 to 1800px on the long edge is plenty for web.
 
 ---
 
-## 4. The video essay
+## 6. Text you may still want to personalize
 
-Drop your file in as exactly:
-
-```
-assets/video/vein-finder-video-essay.mp4
-```
-
-It must be an `.mp4` for the widest browser support. If your export is from a different
-app and comes out as `.mov`, either re-export as `.mp4`, or rename the file **and** update
-the `<source src="...">` path near the top of `vein-finder.html`.
-
-**A note on file size:** GitHub has a 100MB per-file hard limit (and pages load slowly
-over ~20–30MB of video). If your export is large, compress it first. Two easy options:
-
-- **HandBrake** (free, drag-and-drop, handbrake.fr) — use the "Fast 1080p30" preset.
-- Or if you have `ffmpeg`: `ffmpeg -i input.mov -vcodec libx264 -crf 26 vein-finder-video-essay.mp4`
-
-I also added a `poster` attribute on the video player pointing to
-`assets/img/vein-finder/construction/video-poster.jpg` — an optional still frame shown
-before the video plays. Drop any photo in there with that name, or ignore it (the
-browser will just show the first video frame instead).
+- **`index.html`**, there's a second, empty paragraph slot under the About Me text if you want to
+  add something more personal (what you're looking for next, interests outside the lab, etc).
 
 ---
 
-## 5. Text you need to fill in
+## 7. Retinting or restyling
 
-- **`index.html`** — About Me paragraph is drafted from what I know about your work; read
-  it over and adjust the voice/details. There's a second empty paragraph slot if you
-  want to add something more personal. Also replace:
-  - the LinkedIn URL (currently a placeholder `#`-style link)
-  - `Allie [Last Name]` in the title block
-- **`vein-finder.html`** — the "Reasoning & Background" section has a dashed placeholder
-  box. Delete it and paste your mini essay in as plain paragraphs
-  (`<p>your text</p>` for each paragraph).
-- **`hearing-aid.html`** — one bracketed sentence to fill in about the team's goal and
-  your individual contribution.
+All colors live as CSS variables at the top of `css/style.css` under `:root`. Change a hex value
+there and it updates everywhere (`--copper` is the accent used for links and highlights, `--paper`
+is the background). The main font is a Times New Roman stack; the small monospace labels (nav,
+tags, captions) use IBM Plex Mono for the technical/drafting feel, both are also set at the top of
+that file if you want to change them.
 
 ---
 
-## 6. Retinting or restyling
-
-All colors live as CSS variables at the top of `css/style.css` under `:root`. Change a
-hex value there and it updates everywhere (e.g. `--copper` is the rust/copper accent
-used for links and highlights, `--paper` is the background). Fonts (Zilla Slab for
-headings, Inter for body text, IBM Plex Mono for the technical labels) are also loaded
-in that same file if you ever want to swap them.
-
----
-
-Questions or something breaks? The most common issue is a filename mismatch — the path
-in the HTML/JS has to match the actual filename exactly, including capitalization and
-`.jpg` vs `.jpeg` vs `.png`.
+Questions or something breaks? The most common issue is a filename mismatch, the path in the
+HTML/JS has to match the actual filename exactly, including capitalization and `.jpg` vs `.jpeg`
+vs `.png`.

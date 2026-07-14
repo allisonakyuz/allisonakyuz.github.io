@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hearing Aid — Allie's BME Portfolio</title>
+<title>Hearing Aid | Allie's BME Portfolio</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-nav">
   <div class="nav-row">
-    <div class="brand">Allie <small>Biomedical Engineering — Cornell</small></div>
+    <div class="brand">Allie <small>Biomedical Engineering, Cornell</small></div>
     <nav class="links">
       <a href="index.html">Home</a>
       <a href="projects.html" class="active">Projects</a>
@@ -21,11 +21,11 @@
 <div class="wrap">
 
   <div class="project-header">
-    <span class="eyebrow">Project 02 · Engineering World Health × Solar Ear</span>
-    <h1>Hearing Aid — Energy Harvesting Circuit</h1>
+    <span class="eyebrow">Project 02 · Engineering World Health x Solar Ear</span>
+    <h1>Hearing Aid, Energy Harvesting Pendulum</h1>
     <div class="meta-row">
       <span>Team: Engineering World Health @ Cornell</span>
-      <span>Role: Project team lead</span>
+      <span>Role: Integrative Design subteam member</span>
       <span>Collaborator: Solar Ear</span>
     </div>
   </div>
@@ -35,19 +35,12 @@
     <span class="section-num">01</span><strong>About the Project</strong>
     <div class="essay" style="margin-top:16px;">
       <p>
-        This is a collaborative project with Solar Ear, developed through Engineering World
-        Health at Cornell, focused on a magnetic energy-harvesting circuit and solenoid-based
-        voltage generation for a low-cost hearing aid.
-      </p>
-      <!--
-        EDIT: since this is a team project, this is a good place to be
-        explicit about which parts were your individual contribution
-        (e.g. circuit design) versus team scope, before the circuits
-        section below.
-      -->
-      <p>
-        [Add 1–2 sentences on the team's overall goal and how the design fits into Solar Ear's
-        mission, then be clear that the circuits section below is specifically your contribution.]
+        This project is a collaboration between Engineering World Health at Cornell and Solar Ear,
+        focused on a magnetic energy harvesting pendulum for a low-cost, sustainable hearing aid
+        intended for underserved communities. As a member of the Integrative Design subteam, my
+        primary contribution has been circuit design and testing for the energy harvesting system.
+        The team presented these findings at the ASEE St. Lawrence Research Poster Conference, and
+        the collaboration with Solar Ear is continuing into Fall 2026 to refine the prototype.
       </p>
     </div>
   </section>
@@ -55,10 +48,6 @@
   <!-- ============ 2. POSTER ============ -->
   <section>
     <span class="section-num">02</span><strong>Conference Poster</strong>
-    <p style="color:var(--ink-soft);max-width:65ch;">
-      REPLACE IMAGE: <code>assets/img/hearing-aid/poster/poster.jpg</code>. Export the poster
-      at high resolution — this is meant to be readable close-up, not just a thumbnail.
-    </p>
     <div class="gallery" id="poster-gallery"></div>
   </section>
 
@@ -66,8 +55,9 @@
   <section>
     <span class="section-num">03</span><strong>Circuit Work</strong>
     <p style="color:var(--ink-soft);max-width:65ch;">
-      Your individual contribution to the collaboration. Edit the <code>circuitImages</code>
-      list below to add schematics, breadboard shots, or oscilloscope captures.
+      Your individual contribution to the collaboration: the energy harvesting circuit schematic,
+      a breadboard prototype under multimeter testing, and the electrical specifications section
+      from the poster.
     </p>
     <div class="gallery" id="circuit-gallery"></div>
   </section>
@@ -75,26 +65,24 @@
   <!-- ============ 4. PRESENTING PHOTO ============ -->
   <section>
     <span class="section-num">04</span><strong>Presenting</strong>
-    <div class="portrait-frame" style="max-width:420px;">
-      <!-- REPLACE IMAGE: assets/img/hearing-aid/presenting/presenting.jpg -->
+    <div class="portrait-frame" style="max-width:560px;">
       <img src="assets/img/hearing-aid/presenting/presenting.jpg"
-           alt="Presenting the hearing aid poster"
+           alt="Presenting the hearing aid poster at the ASEE St. Lawrence Research Poster Conference"
            data-fallback-label="PHOTO OF YOU PRESENTING<br>assets/img/hearing-aid/presenting/presenting.jpg"
-           data-shape="square"
-           style="width:100%;display:block;object-fit:cover;aspect-ratio:4/5;">
-      <div class="frame-label">FIG. — PRESENTING AT ASEE ST. LAWRENCE</div>
+           style="width:100%;display:block;object-fit:cover;aspect-ratio:16/11;">
+      <div class="frame-label">FIG, PRESENTING AT ASEE ST. LAWRENCE</div>
     </div>
   </section>
 
   <div class="title-block">
     <div class="cell"><span class="label">Sheet</span><span class="value">04 / Hearing Aid</span></div>
-    <div class="cell"><span class="label">Mechanism</span><span class="value">Solenoid voltage gen.</span></div>
+    <div class="cell"><span class="label">Mechanism</span><span class="value">Magnetic pendulum harvester</span></div>
     <div class="cell"><span class="label">Collaborator</span><span class="value">Solar Ear</span></div>
     <div class="cell"><span class="label">Deliverables</span><span class="value">Poster, circuits, photo</span></div>
   </div>
 
   <footer>
-    <p class="fine">← <a href="projects.html">Back to Projects</a></p>
+    <p class="fine">&larr; <a href="projects.html">Back to Projects</a></p>
   </footer>
 </div>
 
@@ -105,9 +93,9 @@
     'poster.jpg'
   ];
   const circuitImages = [
-    'circuit-1.jpg',
-    'circuit-2.jpg',
-    'circuit-3.jpg'
+    'circuit-1-schematic.jpg',
+    'circuit-2-breadboard-testing.jpg',
+    'circuit-3-poster-electrical-specs.jpg'
   ];
 
   buildGallery('poster-gallery', 'assets/img/hearing-aid/poster/', posterImages);
