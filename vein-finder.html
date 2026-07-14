@@ -108,10 +108,14 @@
   <!-- ============ 2. CAD GALLERY ============ -->
   <section>
     <span class="section-num">02</span><strong>CAD, Fusion 360 Assembly</strong>
-    <p style="color:var(--ink-soft);max-width:65ch;">
-      Three angles of the assembly. To add or remove an angle, edit the
-      <code>caseAngles</code> list in the &lt;script&gt; at the bottom of this page, and the row
-      above updates automatically.
+    <p style="color:var(--ink-soft);">
+      My first CAD models were built around a much more complicated device: a camera with an
+      infrared pass filter, a bank of infrared bulbs, and a system to relay vein images to a
+      computer. Once that setup proved too ambitious for a first prototype, I rebuilt the model
+      around something simpler, a single case housing a ring of near-infrared LEDs, a 9V battery,
+      and a basic on-off switch. Modeling that simpler version in Fusion 360 is where I actually
+      learned most of what I know about CAD now, from sketching the rounded case profile to
+      figuring out how a hinged battery compartment needed to fit together.
     </p>
     <div class="cad-gallery" id="cad-gallery"></div>
   </section>
@@ -119,7 +123,7 @@
   <!-- ============ 3. VIDEO ESSAY ============ -->
   <section>
     <span class="section-num">03</span><strong>Video Essay</strong>
-    <p style="color:var(--ink-soft);max-width:65ch;">
+    <p style="color:var(--ink-soft);">
       The full build journal, from early prototyping through final testing. Hosted as an unlisted
       YouTube video, not searchable or listed on the channel, but playable right here.
     </p>
@@ -135,12 +139,17 @@
   <!-- ============ 4. CONSTRUCTION / FINAL PHOTOS ============ -->
   <section>
     <span class="section-num">04</span><strong>Construction &amp; Final Photos</strong>
-    <p style="color:var(--ink-soft);max-width:65ch;">
-      No photos here yet. Once you take some final build photos, drop them into
-      <code>assets/img/vein-finder/construction/</code> and add the filenames to the
-      <code>constructionPhotos</code> list at the bottom of this page.
+    <p style="color:var(--ink-soft);">
+      These photos show the actual build, not a polished final product. The case is hand-cut and
+      glued cardboard, coated in a few layers of white paint to hold its shape, and the LED ring
+      is hand-soldered rather than manufactured. I originally wired it with 940 nm LEDs, not
+      realizing that wavelength sits outside the visible spectrum, which cost me a lot of
+      troubleshooting time and a few burned out bulbs before I switched to 640 nm visible red
+      LEDs, which balance visibility and near-infrared properties much better for a prototype
+      like this. It does not match the brightness or clarity of a commercial device, but it does
+      highlight veins under the right conditions, which was the whole point of building it.
     </p>
-    <div class="gallery" id="construction-gallery"></div>
+    <div class="cad-gallery" id="construction-gallery"></div>
   </section>
 
   <footer>
@@ -169,13 +178,13 @@
     'vein-finder-open-battery-latch.png'
   ];
   const constructionPhotos = [
-    // no photos yet, add filenames here once you take some, e.g.:
-    // 'final-1.jpg',
-    // 'final-2.jpg'
+    'vein-finder-top-angle.png',
+    'vein-finder-bottom-angle.png',
+    'vein-finder-open-battery-latch.png'
   ];
 
   buildCadGallery('cad-gallery', 'assets/img/vein-finder/cad/', caseAngles);
-  buildGallery('construction-gallery', 'assets/img/vein-finder/construction/', constructionPhotos);
+  buildCadGallery('construction-gallery', 'assets/img/vein-finder/construction/', constructionPhotos);
 </script>
 </body>
 </html>
