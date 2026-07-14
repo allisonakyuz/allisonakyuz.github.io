@@ -27,13 +27,10 @@ Every time you push a change, the live site updates automatically within a minut
 ## 2. What's already filled in
 
 - **Home:** your headshot, About Me text (Duffield College of Engineering, Integrative Design
-  subteam, Clarius + Olea internships), résumé and LinkedIn buttons (LinkedIn still needs your
-  real URL, see section 3).
+  subteam, Clarius + Olea internships), résumé and LinkedIn buttons, both fully wired up.
 - **Projects:** both cards, with real thumbnails and corrected descriptions.
 - **Vein Finder:** your full capstone essay (with citations), a 5-image CAD gallery, and the full
-  build journal video (96MB, a custom cover card instead of a random video frame). Note: GitHub's
-  hard limit is 100MB per file, so this fits, but it's close to the edge. If you ever re-export a
-  larger version, keep it under 100MB or GitHub will reject the upload.
+  build journal video (19MB, a custom cover card instead of a random video frame).
 - **Hearing Aid:** the About section, a clean high-resolution export of your actual poster file,
   3 circuit images (your schematic, the breadboard/multimeter testing photo, and a crop of the
   poster's electrical specifications section), and your presenting photo.
@@ -42,7 +39,6 @@ Every time you push a change, the live site updates automatically within a minut
 
 1. **Construction and final build photos of the vein finder.** You mentioned you'll take these
    later. See section 5 below for exactly how to add them once you have them.
-2. **Your real LinkedIn URL** on the home page (currently a placeholder).
 
 ---
 
@@ -70,9 +66,9 @@ assets/
       presenting/
         presenting.jpg            Your presenting photo (filled in)
   video/
-    vein-finder-video-essay.mp4  Full build journal video (filled in, 96MB)
+    vein-finder-video-essay.mp4  Full build journal video (filled in, 19MB)
   resume/
-    resume.pdf                  NOT YET ADDED, drop your résumé PDF in with this exact name
+    resume.pdf                  Your résumé (filled in)
 ```
 
 ---
